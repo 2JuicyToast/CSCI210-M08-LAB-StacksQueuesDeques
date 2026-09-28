@@ -16,7 +16,17 @@ public final class DequeJavaQueueTest {
         // to the queue example in Participation Activity 6.25
         // in the Zybook text
         // Use addLast and removeFirst
+        S.addLast("A");                        // contents: (A)
+        S.addLast("B");                        // contents: (A, B)
+        S.addLast("C");                        // contents: (A, B, C)
 
+        returnItem = S.removeFirst();          // removes A; contents: (B, C)
+        System.out.println("Removed item: " + returnItem);
+
+        S.addLast("D");                        // contents: (B, C, D)
+
+        returnItem = S.removeFirst();          // removes B; contents: (C, D)
+        System.out.println("Removed item: " + returnItem);
 
         // Now print the final deque
         // Now convert to String and print

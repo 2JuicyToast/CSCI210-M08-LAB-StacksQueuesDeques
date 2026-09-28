@@ -16,7 +16,17 @@ public final class DequeJavaStackTest {
         // to the stack example in Participation Activity 6.1.1
         // in the Zybook text
         // Use addLast and removeLast
+        S.addLast("A");                        // contents: (A)
+        S.addLast("B");                        // contents: (A, B)
+        S.addLast("C");                        // contents: (A, B, C)
 
+        returnItem = S.removeLast();           // removes C; contents: (A, B)
+        System.out.println("Removed item: " + returnItem);
+
+        S.addLast("D");                        // contents: (A, B, D)
+
+        returnItem = S.removeLast();           // removes D; contents: (A, B)
+        System.out.println("Removed item: " + returnItem);
 
         // Now print the final deque
         // Now convert to String and print
